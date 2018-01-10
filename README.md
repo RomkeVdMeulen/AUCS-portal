@@ -1,6 +1,6 @@
 # aurelia-community website
 
-This is an Aurelia CLI application, rnn it by 
+This is an Aurelia CLI application, run it by
 
 ```
 npm install
