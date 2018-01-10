@@ -1,2 +1,9 @@
-# aurelia-community.github.io
-Aurelia technical documents written by members of Aurelia Community
+# aurelia-community website
+
+This is an Aurelia CLI application, rnn it by 
+
+```
+npm install
+au run
+```
+
