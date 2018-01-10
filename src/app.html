@@ -1,0 +1,13 @@
+<template>
+  <require from="nav-bar"></require>
+  <nav-bar></nav-bar>
+  <require from="side-bar"></require>
+  <require from="footer"></require>
+  <div class="main-layout">
+    <side-bar router.bind="router"></side-bar>
+    <div class="page-host">
+      <router-view></router-view>
+      <footer class="content-footer" id="app-footer"></footer>
+    </div>
+  </div>
+</template>
