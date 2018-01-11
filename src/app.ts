@@ -27,7 +27,7 @@ class RouterStep {
 
 class PostCompleteStep {
   run(routingContext, next) {
-    $(".main-layout").scrollTop(0);
+    //$(".main-layout").scrollTop(0);
     return next();
   }
 }

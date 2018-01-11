@@ -1,5 +1,5 @@
 .main-layout {
-
+min-height: 100%;
 }
 navbar {
   background-color: #f4f4f4;
@@ -8,10 +8,13 @@ navbar {
   position: absolute;
   left: 68px;
   right: -20px;
-  top: 60px;
+  top: 0px;
   bottom: 0;
   overflow-x: hidden;
   overflow-y: auto;
+  background: url("../img/bg-pattern.png"), #7b4397;
+  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #7b4397, #dc2430);
+  background: url("../img/bg-pattern.png"), linear-gradient(to left, #7b4397, #dc2430);
 }
 side-bar {
   position: absolute;
@@ -19,7 +22,7 @@ side-bar {
   max-width: 74px;
   font-size: 11px;
   height: 100%;
-  top: 60px;
+  top: 0px;
 }
 side-bar a {
   text-align: center;
@@ -82,40 +85,19 @@ nav-bar nav {
   height: 36px;
 }
 
+footer {
+  bottom: 0px;
+  height: 50px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  font-size: 12px; font-weight: normal; color: yellow;
+}
 footer.content-footer {
-  padding: 48px;
-  background-color: #6d50a2;
-  color: #fff;
+  padding: 16px;
+  background-color: black;
   transition: margin-left .2s;
   margin-top: 20px;
-}
-
-footer.content-footer > .links {
-margin-bottom: 36px;
-display: flex;
-justify-content: center;
-text-align: left;
-}
-
-footer.content-footer > .links .link-column {
-  margin: 0 36px;
-  vertical-align: top;
-}
-
-footer.content-footer > .links .link-column > h4 {
-  margin-bottom: 16px;
-  text-transform: uppercase;
-}
-
-footer.content-footer > .links .link-column li {
-  font-weight: lighter;
-  font-size: 16px;
-  line-height: 24px;
-}
-
-footer.content-footer a {
-  color: #fff;
-  text-decoration: none;
 }
 
 footer.content-footer > .copyright {
