@@ -19,19 +19,15 @@ export class GuideContent {
   }
 
   activate(params) {
-    const fragment = params.id;
+    const fragment = params.id ? (params.id as string) : '1.1';
     console.log(fragment);
     return this.client.fetch('https://api.gitbook.com/book/aurelia-tools/aurelia-cli-visions/contents')
       .then(response => response.json())
       .then(data => {
         console.log(data);
         this.chapters = data.progress.chapters;
-        //////////////////
         let chapter = this.chapters.find((value, index) => value.level == fragment);
         console.log(chapter);
-        // if (route === undefined)
-        //   route = this.router.routes[0];
-        //   console.log(route);
         const path = chapter.path.replace('md', 'json');
         console.log(path);
         return this.client.fetch(`https://api.gitbook.com/book/aurelia-tools/aurelia-cli-visions/contents/${path}`)

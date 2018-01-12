@@ -28,18 +28,6 @@ export class Guides {
       .then(data => {
         console.log(data);
         this.chapters = data.progress.chapters;
-        // for (let chapter of data.progress.chapters) {
-        //   const route = {
-        //     route: chapter.level,
-        //     name: chapter.level,
-        //     moduleId: 'guides/guide-content',
-        //     title: chapter.title,
-        //     settings: { children: [], path: chapter.path.replace('.md', '.json') },
-        //     nav: true
-        //   };
-        //   this.routes.push(route);
-        // }
-        // config.map(this.routes);
         return true;
       });
   }

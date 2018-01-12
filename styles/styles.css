@@ -89,7 +89,7 @@ footer {
   bottom: 0px;
   height: 50px;
   left: 0;
-  position: absolute;
+  position: fixed;
   right: 0;
   font-size: 12px; font-weight: normal; color: yellow;
 }
@@ -105,4 +105,20 @@ footer.content-footer > .copyright {
   font-weight: lighter;
   font-size: 14px;
   line-height: 18px;
+}
+
+guide-bar {
+  position: fixed;
+  background-color: gray;
+  max-width: 300px;
+  font-size: 11px;
+  height: 100%;
+  top: 0px;
+}
+guide-bar a {
+  color:#c6c6c6;
+}
+
+guide-bar a:hover {
+  color: white;
 }
