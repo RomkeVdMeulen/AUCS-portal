@@ -1,3 +1,5 @@
 <template>
-	<guides-container></guides-container>
+	<template repeat.for="book of books.topics">
+		${book.title} - ${book.book}- ${book.author}
+	</template>
 </template>
