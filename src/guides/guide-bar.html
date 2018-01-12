@@ -1,0 +1,9 @@
+<template>
+	<ul>
+		<li repeat.for="chapter of chapters">
+			<a class="nav-link" href.bind="'/#/guides/content/' + chapter.level">
+				${chapter.title}
+			</a>
+		</li>
+	</ul>
+</template>

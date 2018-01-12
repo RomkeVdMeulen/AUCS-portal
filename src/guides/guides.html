@@ -1,3 +1,6 @@
 <template>
-	<guides-container></guides-container>
+	<require from="./guide-bar"></require>
+	<guide-bar chapters.bind="chapters"></guide-bar>
+	<!-- <guides-container></guides-container> -->
+	<router-view></router-view>
 </template>
