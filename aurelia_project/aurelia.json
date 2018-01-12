@@ -23,8 +23,9 @@
       {
         "name": "app-bundle.js",
         "source": [
-          "[**/*.js]",
-          "**/*.{css,html}"
+          "[**/*.js]", 
+          "**/*.{css,html}", 
+          "**/*.json"
         ]
       },
       {
@@ -104,7 +105,7 @@
         {
           "name": "text",
           "extensions": [
-            ".html",
+            ".html", 
             ".css"
           ],
           "stub": true
