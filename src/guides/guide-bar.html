@@ -1,9 +1,14 @@
 <template>
-	<ul>
-		<li repeat.for="chapter of chapters">
-			<a class="nav-link" href.bind="'/#/guides/content/' + chapter.level">
-				${chapter.title}
-			</a>
-		</li>
-	</ul>
+	<div class="card" style="width: 18rem;">
+		<div class="card-header">
+			${title}
+		</div>
+		<ul class="list-group list-group-flush">
+			<li repeat.for="item of items" class="list-group-item">
+				<a class="nav-link" href.bind="'/#/guides/content/' + item.path" click.trigger="itemClicked($event)">
+					${item.title}
+				</a>
+			</li>
+		</ul>
+	</div>
 </template>
