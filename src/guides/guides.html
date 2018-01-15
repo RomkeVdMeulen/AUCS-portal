@@ -1,5 +1,6 @@
 <template>
-	<template repeat.for="book of books.topics">
-		${book.title} - ${book.book}- ${book.author}
-	</template>
+	<require from="./guide-bar"></require>
+	<!-- <guide-bar topics.bind="sitemap.topics"></guide-bar> -->
+	<!-- <guides-container></guides-container> -->
+	<router-view></router-view>
 </template>

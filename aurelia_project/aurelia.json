@@ -24,8 +24,7 @@
         "name": "app-bundle.js",
         "source": [
           "[**/*.js]",
-          "**/*.{css,html}",
-          "**/*.json"
+          "**/*.{css,html}"
         ]
       },
       {
