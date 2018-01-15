@@ -7,42 +7,45 @@ import * as data from "text!assets/site-map.json";
 export class Guides {
   router: Router;
   books: any;
-  sitemap: any;
   client: HttpClient;
   chapters: any;
   atRoot: boolean;
   title: string;
   items: any;
-  content: any;
+  content: string;
   parentLink: any;
   showParentLink: boolean;
     
   constructor(client: HttpClient, router: Router) {
     this.client = client;
     this.router = router;
-    this.sitemap = JSON.parse(data as any);
+    let sitemap: any = JSON.parse(data as any);
+    this.items = sitemap.topics;
+    this.content = sitemap.content;
   }
 
   activate(params, navigationInstruction) {
     console.log(navigationInstruction);
-    const ri = location.href.indexOf('guides/');
-    const target = ri > -1 ? location.href.substr(ri).replace('guides/', '') : '';
-    return this.client.fetch('https://api.gitbook.com/book/aurelia-tools/aurelia-cli-visions/contents')
-      .then(response => response.json())
-      .then(data => {
-        this.chapters = data.progress.chapters;
-        this.chapters.forEach(element => {
-          element.path = element.path.replace('.md', '').replace(/\//g, '_____');
-          const index = element.level.lastIndexOf('.');
-          element.parentLevel = index > -1 ? element.level.substr(0, index) : '';
+    if (params.author) {
+      const ri = location.href.indexOf('guides/');
+      const target = ri > -1 ? location.href.substr(ri).replace('guides/', '') : '';
+      return this.client.fetch('https://api.gitbook.com/book/aurelia-tools/aurelia-cli-visions/contents')
+        .then(response => response.json())
+        .then(data => {
+          this.chapters = data.progress.chapters;
+          this.chapters.forEach(element => {
+            element.path = element.path.replace('.md', '').replace(/\//g, '_____');
+            const index = element.level.lastIndexOf('.');
+            element.parentLevel = index > -1 ? element.level.substr(0, index) : '';
+          });
+          this.chapters.forEach(element => {
+            element.descendants = this.findDescendants(element);
+          });
+          console.log(this.chapters);
+          this.setCurrentTopic(target);
+          return true;
         });
-        this.chapters.forEach(element => {
-          element.descendants = this.findDescendants(element);
-        });
-        console.log(this.chapters);
-        this.setCurrentTopic(target);
-        return true;
-      });
+    }
   }
 
   findDescendants(parentElement: any): any {
