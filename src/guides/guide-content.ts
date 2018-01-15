@@ -1,5 +1,5 @@
-import {Router} from 'aurelia-router';
-import {bindable, inject} from 'aurelia-framework';
+import { Router } from 'aurelia-router';
+import { bindable, inject } from 'aurelia-framework';
 import { HttpClient } from 'aurelia-fetch-client';
 
 @inject(Router, HttpClient)
@@ -19,24 +19,13 @@ export class GuideContent {
   }
 
   activate(params) {
-    const fragment = params.id ? (params.id as string) : '1.1';
-    console.log(fragment);
-    return this.client.fetch('https://api.gitbook.com/book/aurelia-tools/aurelia-cli-visions/contents')
+    const fragment = params.path ? (params.path as string) : 'README';
+    const path = `${fragment}.json`.replace(/_____/g, '/');
+    return this.client.fetch(`https://api.gitbook.com/book/aurelia-tools/aurelia-cli-visions/contents/${path}`)
       .then(response => response.json())
-      .then(data => {
-        console.log(data);
-        this.chapters = data.progress.chapters;
-        let chapter = this.chapters.find((value, index) => value.level == fragment);
-        console.log(chapter);
-        const path = chapter.path.replace('md', 'json');
-        console.log(path);
-        return this.client.fetch(`https://api.gitbook.com/book/aurelia-tools/aurelia-cli-visions/contents/${path}`)
-          .then(response => response.json())
-          .then(content => {
-            console.log(content);
-            this.content = content.sections[0].content;
-            return true;
-          });    
+      .then(content => {
+        this.content = content.sections[0].content;
+        return true;
       });
   }
 }
