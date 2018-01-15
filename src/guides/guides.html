@@ -1,7 +1,7 @@
 <template>
 	<!-- <require from="./guide-bar"></require>
 	<guide-bar at-root.bind="atRoot" title.bind="title" items.bind="chapters"></guide-bar> -->
-	<div class="card guide-bar" style="width: 18rem;">
+	<div show.bind="urlBook == ''" class="card guide-bar" style="width: 18rem;">
 		<div class="card-header">
 			<a href.bind="parentLink">
 					<svg if.bind="showParentLink"
@@ -15,11 +15,13 @@
 		</div>
 		<ul class="list-group list-group-flush">
 			<li repeat.for="item of items" class="list-group-item">
-				<a class="nav-link" href.bind="'/#/guides/' + item.path" click.trigger="itemClicked($event)">
+				<a class="nav-link" href.bind="IframeUrl(item)">
 					${item.title}
 				</a>
 			</li>
 		</ul>
 	</div>
-	<p innerhtml.bind="content" class="guide-content"></p>
+	<p show.bind="urlBook == ''" innerhtml.bind="content" class="guide-content"></p>
+	<iframe show.bind="urlBook != ''" src.bind="urlBook" title="iframe example 1" width="100%" height="100%" allowfullscreen>
+	</iframe>
 </template>

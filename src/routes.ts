@@ -27,6 +27,15 @@ const routes = [
     href: "#guides/content"
   },
   {
+    route: "guides/content/:author/:book",
+    name: "guides",
+    moduleId: "guides/guides",
+    nav: true,
+    title: "Guides",
+    settings: { icon: guidesIcon },
+    href: "#/guides/content/:author/:book"
+  },
+  {
     route: "blog",
     name: "blog",
     moduleId: "blog/blog",

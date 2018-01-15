@@ -1,10 +1,11 @@
 import { Router } from "aurelia-router";
-import { inject } from "aurelia-framework";
+import { inject, bindable } from "aurelia-framework";
 import { HttpClient } from 'aurelia-fetch-client';
 import * as data from "text!assets/site-map.json";
 
 @inject(HttpClient, Router)
 export class Guides {
+  @bindable() urlBook: string;
   router: Router;
   books: any;
   client: HttpClient;
@@ -20,31 +21,39 @@ export class Guides {
     this.client = client;
     this.router = router;
     let sitemap: any = JSON.parse(data as any);
-    this.items = sitemap.topics;
+    this.items = sitemap.categories;
     this.content = sitemap.content;
+  }
+
+  IframeUrl(param) {
+    return `/#/guides/content/${param.author}/${param.book}`;
   }
 
   activate(params, navigationInstruction) {
     console.log(navigationInstruction);
     if (params.author) {
-      const ri = location.href.indexOf('guides/');
-      const target = ri > -1 ? location.href.substr(ri).replace('guides/', '') : '';
-      return this.client.fetch('https://api.gitbook.com/book/aurelia-tools/aurelia-cli-visions/contents')
-        .then(response => response.json())
-        .then(data => {
-          this.chapters = data.progress.chapters;
-          this.chapters.forEach(element => {
-            element.path = element.path.replace('.md', '').replace(/\//g, '_____');
-            const index = element.level.lastIndexOf('.');
-            element.parentLevel = index > -1 ? element.level.substr(0, index) : '';
-          });
-          this.chapters.forEach(element => {
-            element.descendants = this.findDescendants(element);
-          });
-          console.log(this.chapters);
-          this.setCurrentTopic(target);
-          return true;
-        });
+      this.urlBook = `https://${params.author}.gitbooks.io/${params.book}/content/`;
+      // const ri = location.href.indexOf('guides/');
+      // const target = ri > -1 ? location.href.substr(ri).replace('guides/', '') : '';
+
+      // return this.client.fetch('https://www.gitbook.com/book/aurelia-tools/aurelia-cli-visions/contents')
+      //   .then(response => response.json())
+      //   .then(data => {
+      //     this.chapters = data.progress.chapters;
+      //     this.chapters.forEach(element => {
+      //       element.path = element.path.replace('.md', '').replace(/\//g, '_____');
+      //       const index = element.level.lastIndexOf('.');
+      //       element.parentLevel = index > -1 ? element.level.substr(0, index) : '';
+      //     });
+      //     this.chapters.forEach(element => {
+      //       element.descendants = this.findDescendants(element);
+      //     });
+      //     console.log(this.chapters);
+      //     this.setCurrentTopic(target);
+      //     return true;
+      //   });
+    } else {
+      this.urlBook = '';
     }
   }
 
