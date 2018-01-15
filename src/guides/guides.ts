@@ -1,43 +1,96 @@
 import { Router } from "aurelia-router";
 import { inject } from "aurelia-framework";
+import { HttpClient } from 'aurelia-fetch-client';
 import * as data from "text!assets/site-map.json";
 
-@inject(Router)
+@inject(HttpClient, Router)
 export class Guides {
   router: Router;
   books: any;
   sitemap: any;
-  constructor(router: Router) {
+  client: HttpClient;
+  chapters: any;
+  atRoot: boolean;
+  title: string;
+  items: any;
+  content: any;
+  parentLink: any;
+  showParentLink: boolean;
+    
+  constructor(client: HttpClient, router: Router) {
+    this.client = client;
     this.router = router;
     this.sitemap = JSON.parse(data as any);
   }
 
-  // configureRouter1(config, router) {
-
-  configureRouter(config, router) {
-    let routes: any[] = [];
-    this.router = router;
-    console.log(this.sitemap);
-
-    for (let route of this.sitemap.topics) {
-      console.log(route);
-
-      route.path = route.path || "";
-
-      routes.push({
-        route: "guides/content/:author/:book/:path",
-        name: `${route.author}-${route.book}-${route.path}`,
-        moduleId: "guides/guide-content",
-        nav: true,
-        href: `#guides/guide-content/${route.author}/${route.book}/${
-          route.path
-        }`,
-        title: route.title,
-        settings: { children: [], path: "" }
+  activate(params, navigationInstruction) {
+    console.log(navigationInstruction);
+    const ri = location.href.indexOf('guides/');
+    const target = ri > -1 ? location.href.substr(ri).replace('guides/', '') : '';
+    return this.client.fetch('https://api.gitbook.com/book/aurelia-tools/aurelia-cli-visions/contents')
+      .then(response => response.json())
+      .then(data => {
+        this.chapters = data.progress.chapters;
+        this.chapters.forEach(element => {
+          element.path = element.path.replace('.md', '').replace(/\//g, '_____');
+          const index = element.level.lastIndexOf('.');
+          element.parentLevel = index > -1 ? element.level.substr(0, index) : '';
+        });
+        this.chapters.forEach(element => {
+          element.descendants = this.findDescendants(element);
+        });
+        console.log(this.chapters);
+        this.setCurrentTopic(target);
+        return true;
       });
-    }
-    console.log(routes);
+  }
 
-    config.map(routes);
+  findDescendants(parentElement: any): any {
+    let descendants = [];
+    this.chapters.forEach(element => {
+      if (element.parentLevel === parentElement.level)
+        descendants.push(element);
+    });
+    return descendants;
+  }
+
+  itemClicked(params: any): void {
+    const href = params.target.href as string;
+    if (href === location.href)
+      return;
+    const target = href.substr(href.indexOf('guides/')).replace('guides/', '');
+    this.setCurrentTopic(target);
+    this.router.navigate(href);
+  }
+
+  setCurrentTopic(topic: any) {
+    console.log(topic);
+    // locate current entry
+    const chapter = this.chapters.find(c => c.path === topic);
+    const level = chapter ? chapter.level : '';
+    console.log(chapter);
+    if (chapter) {
+      this.items = chapter.descendants;
+      this.title = chapter.title;
+      const index = chapter.level.lastIndexOf('.');
+      const parentLevel = index > -1 ? chapter.level.substr(0, index) : '';
+      const parentChapter = this.chapters.find(c => c.level === parentLevel);
+      this.parentLink = parentChapter == undefined ? '/#/guides' : `/#/guides/${parentChapter.path}`;
+      this.showParentLink = parentChapter == undefined;
+    }
+    else {
+      this.items = this.chapters.filter(element => element.parentLevel.length === 1);
+      this.title = 'Guides';
+      this.parentLink = undefined;
+      this.showParentLink = false;
+    }
+    const topicToShow = topic === '' ? this.items[0].path : topic;
+    const path = `${topicToShow}.json`.replace(/_____/g, '/');
+    return this.client.fetch(`https://api.gitbook.com/book/aurelia-tools/aurelia-cli-visions/contents/${path}`)
+      .then(response => response.json())
+      .then(content => {
+        this.content = content.sections[0].content;
+        return true;
+      });
   }
 }
