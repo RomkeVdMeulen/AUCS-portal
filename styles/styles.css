@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 html {
     box-sizing: border-box;
     font-family: 'Source Sans Pro', sans-serif;
@@ -17,8 +16,11 @@ html,
 body {
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
-    overflow-y: scroll;
+    overflow: hidden;
+}
+
+body {
+    overflow-y: auto !important;
 }
 
 hr {
@@ -28,8 +30,7 @@ hr {
 }
 
 .page-host {
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden;
     background: url("../img/bg-pattern.png"), #7b4397;
     background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #7b4397, #dc2430);
     background: url("../img/bg-pattern.png"), linear-gradient(to left, #7b4397, #dc2430);
@@ -239,6 +240,7 @@ section.iframe {
 section.guides {
     min-width: 100%;
     display: flex;
+    overflow: hidden;
 }
 
 section.guides .side-bar-guides {
@@ -349,8 +351,6 @@ section.guides .group {
 
 section.guides .group .group-summary {
     padding-right: 12px;
-    min-width: 38%;
-    max-width: 38%;
 }
 
 section.guides .group .group-summary .group-header .group-item-count {
