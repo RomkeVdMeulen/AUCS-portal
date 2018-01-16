@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 html {
     box-sizing: border-box;
     font-family: 'Source Sans Pro', sans-serif;
@@ -35,40 +36,6 @@ hr {
     margin-left: 60px;
 }
 
-header-site.app-header {
-    display: block;
-    position: fixed;
-    height: 60px;
-    width: 100%;
-    background-color: #f4f4f4;
-    box-shadow: -20px 0 14px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-    z-index: 65;
-}
-
-header-site.app-header img.aurelia-logo {
-    position: relative;
-    left: 12px;
-    top: 12px;
-    height: 36px;
-}
-
-header-site.app-header search-trigger {
-    margin-left: auto;
-    fill: #646464;
-    float: right;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 16px;
-}
-
-header-site.app-header search-trigger svg {
-    position: relative;
-    top: 2px;
-    cursor: pointer;
-}
-
 footer {
     bottom: 0px;
     height: 50px;
@@ -96,9 +63,9 @@ footer.content-footer>.copyright {
 
 nav-bar {
     position: absolute;
-    top: 60px;
-    left: 0;
-    bottom: 0;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
     width: 60px;
     background-color: #1e1e1e;
     box-shadow: 2px 0px 14px 0px rgba(0, 0, 0, 0.1);
@@ -248,14 +215,17 @@ side-bar {
 
 section.home-screen {
     height: 100vh;
-    margin-top: 60px;
+    padding: 10px;
+}
+
+section.home-screen .card {
+    background-color: #d2d2d2;
     padding: 10px;
 }
 
 section.blog,
 section.help {
     height: 100vh;
-    margin-top: 60px;
 }
 
 section.blog {
@@ -280,7 +250,6 @@ section.guides .side-bar-guides {
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 3px 3px -2px rgba(0, 0, 0, 0.2), 0 8px 8px 0 rgba(0, 0, 0, 0.12);
     transition: all .2s;
     overflow: hidden;
-    margin-top: 60px;
     height: 100vh;
 }
 
