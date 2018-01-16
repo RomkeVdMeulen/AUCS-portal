@@ -1,4 +1,4 @@
-import {homeIcon, guidesIcon, blogIcon, helpIcon} from './routes-icons';
+import {homeIcon, guidesIcon, blogIcon, helpIcon, surveyIcon} from './routes-icons';
 
 const routes = [
   {
@@ -25,6 +25,14 @@ const routes = [
     nav: true,
     title: "Blog",
     settings: { icon: blogIcon }
+  },
+  {
+    route: "survey",
+    name: "survey",
+    moduleId: "survey/survey",
+    nav: true,
+    title: "Survey",
+    settings: { icon: surveyIcon }
   },
   {
     route: "help",
