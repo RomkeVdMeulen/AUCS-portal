@@ -240,6 +240,16 @@ section.home-screen {
     padding: 10px;
 }
 
+section.blog,
+section.help {
+    height: 100vh;
+    margin-top: 60px;
+}
+
+section.blog {
+    background-color: #f4f4f4;
+}
+
 section.iframe {
     height: 100vh;
 }
