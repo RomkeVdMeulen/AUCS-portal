@@ -4,5 +4,5 @@ import { bindable } from 'aurelia-framework';
 
 @inject(Router)
 export class GuideBar {
-  @bindable topics;
+  @bindable guides;
 }

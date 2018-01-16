@@ -10,30 +10,13 @@ const routes = [
     settings: { icon: homeIcon }
   },
   {
-    route: "guides",
-    name: "guides",
-    moduleId: "guides/guides",
-    nav: false,
-    title: "Guides",
-    settings: { icon: guidesIcon }
-  },
-  {
-    route: "guides/content",
+    route: "guides/content/:author?/:book?",
     name: "guides",
     moduleId: "guides/guides",
     nav: true,
     title: "Guides",
     settings: { icon: guidesIcon },
-    href: "#guides/content"
-  },
-  {
-    route: "guides/content/:author/:book",
-    name: "guides",
-    moduleId: "guides/guides",
-    nav: true,
-    title: "Guides",
-    settings: { icon: guidesIcon },
-    href: "#/guides/content/:author/:book"
+    href: "#guides/content/"
   },
   {
     route: "blog",

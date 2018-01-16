@@ -1,8 +1,10 @@
+import { bindable } from "aurelia-framework";
 import { Router } from "aurelia-router";
 import routes from "./routes";
 import $ from "jquery";
 
 export class App {
+  @bindable activeRoute: string = "";
   title: string;
   router: Router;
 
