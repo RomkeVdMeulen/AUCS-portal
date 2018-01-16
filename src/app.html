@@ -1,8 +1,8 @@
 <template>
-  <require from="side-bar"></require>
+  <require from="nav-bar"></require>
   <require from="footer"></require>
   <div class="main-layout">
-    <side-bar router.bind="router"></side-bar>
+    <nav-bar router.bind="router" style="transition: all 0.3s; transform: translate(0%, 0%);"></nav-bar>
     <div class="page-host">
       <router-view></router-view>
       <footer class="content-footer" id="app-footer"></footer>

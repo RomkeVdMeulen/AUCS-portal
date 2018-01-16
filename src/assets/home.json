@@ -1,0 +1,18 @@
+{
+  "contexts": ["content1", "content2", "content3"],
+  "content1": {
+    "text":
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "class": "context1"
+  },
+  "content2": {
+    "text":
+      "Mauris a augue id tellus fermentum efficitur. Etiam semper ex at eros rutrum, eget facilisis eros tempor. Curabitur id sollicitudin purus. Donec ornare, turpis a hendrerit pulvinar, purus risus tincidunt dui, ac accumsan ante lectus ut urna. In eget purus risus. Sed suscipit, nisi convallis vestibulum pharetra, sem velit euismod metus, sit amet ornare neque turpis in nisi. Morbi hendrerit porta leo, volutpat consequat orci elementum ac. Aenean pellentesque mollis tortor quis iaculis. Vestibulum interdum lacinia dui, id faucibus enim aliquet id.",
+    "class": "context2"
+  },
+  "content3": {
+    "text":
+      "Donec pellentesque semper nulla, quis iaculis ante viverra id. Etiam venenatis blandit tincidunt. Nunc egestas vel turpis vitae tristique. Nullam at porta augue, et semper neque. Vivamus elementum volutpat diam. Maecenas elementum risus lectus. Fusce lectus ligula, elementum ut lorem nec, lacinia imperdiet enim. Quisque rutrum luctus leo, id sagittis mi. Nullam bibendum libero in turpis condimentum volutpat. Praesent euismod dapibus nisl, et imperdiet nulla accumsan in. Suspendisse consequat tempus euismod. Etiam vitae nisl lobortis, aliquet augue nec, luctus nunc. Morbi quis rutrum justo. Fusce velit sem, tristique vitae quam et, facilisis consectetur orci. Nam convallis leo at justo egestas, eget laoreet mi cursus.",
+    "class": "context3"
+  }
+}

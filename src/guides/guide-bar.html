@@ -1,0 +1,9 @@
+<template>
+	<ul>
+		<li repeat.for="guide of guides">
+			<a class="nav-link" href.bind="'/#/guides/content/' + guide.author + '/' + guide.book + '/' + guide.path">
+				${guide.title}
+			</a>
+		</li>
+	</ul>
+</template>
