@@ -1,14 +1,13 @@
 {
   "contexts": ["content1", "content2", "content3"],
+  "content2": {
+    "text": "This application - AUCS website should be considered as the 'aggregator and a transient station' between the Aurelia Community and Aurelia core team headed by @EisenbergEffect, meaning that it offers a data buffer content of which could be asynchronously moved to Aurelia proper website.To further facilitate this, all of our data is formatted as markdown files - AUCS website just provides structured interface to this data.",
+    "class": "context2"
+  },
   "content1": {
     "text":
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    "class": "context1"
-  },
-  "content2": {
-    "text":
       "Mauris a augue id tellus fermentum efficitur. Etiam semper ex at eros rutrum, eget facilisis eros tempor. Curabitur id sollicitudin purus. Donec ornare, turpis a hendrerit pulvinar, purus risus tincidunt dui, ac accumsan ante lectus ut urna. In eget purus risus. Sed suscipit, nisi convallis vestibulum pharetra, sem velit euismod metus, sit amet ornare neque turpis in nisi. Morbi hendrerit porta leo, volutpat consequat orci elementum ac. Aenean pellentesque mollis tortor quis iaculis. Vestibulum interdum lacinia dui, id faucibus enim aliquet id.",
-    "class": "context2"
+    "class": "context1"
   },
   "content3": {
     "text":
