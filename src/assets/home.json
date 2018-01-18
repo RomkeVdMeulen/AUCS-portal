@@ -1,17 +1,17 @@
 {
   "contexts": ["content1", "content2", "content3"],
-  "content2": {
-    "text": "This application - AUCS website should be considered as the 'aggregator and a transient station' between the Aurelia Community and Aurelia core team headed by @EisenbergEffect, meaning that it offers a data buffer content of which could be asynchronously moved to Aurelia proper website.To further facilitate this, all of our data is formatted as markdown files - AUCS website just provides structured interface to this data.",
-    "class": "context2"
-  },
+
   "content1": {
-    "text":
-      "Mauris a augue id tellus fermentum efficitur. Etiam semper ex at eros rutrum, eget facilisis eros tempor. Curabitur id sollicitudin purus. Donec ornare, turpis a hendrerit pulvinar, purus risus tincidunt dui, ac accumsan ante lectus ut urna. In eget purus risus. Sed suscipit, nisi convallis vestibulum pharetra, sem velit euismod metus, sit amet ornare neque turpis in nisi. Morbi hendrerit porta leo, volutpat consequat orci elementum ac. Aenean pellentesque mollis tortor quis iaculis. Vestibulum interdum lacinia dui, id faucibus enim aliquet id.",
+    "text": "Aurelia Users Community Space is an organized group of Aurelia users, focusing on a single task:creation of as many well written guides, blogs, tutorials, code snippets, etc. all of which are written by Aurelia developers for Aurelia developers. Note the term 'written by Aurelia developers', indicating that type of technical documents that will be written. Instead of documenting the Aurelia API, use of event listeners, logging, PAL, Router and Templating, AUCS team will start at the level where official Aurelia documents end.",
     "class": "context1"
+  },
+  "content2": {
+    "text": "This application - AUCS website, should be considered as the 'aggregator and a transient station' between the Aurelia Community and Aurelia core team, acting as a markdown data buffer, content of which could be asynchronously moved to Aurelia proper website. All of AUCS deliverables are formatted as markdown files - AUCS website just provides structured interface to this data. In addition AUCS website hosts our own (Ghost) blog and Survey services, instrument that is critical to ensure that everyones voice is taken in the account.",
+    "class": "context2"
   },
   "content3": {
     "text":
-      "Donec pellentesque semper nulla, quis iaculis ante viverra id. Etiam venenatis blandit tincidunt. Nunc egestas vel turpis vitae tristique. Nullam at porta augue, et semper neque. Vivamus elementum volutpat diam. Maecenas elementum risus lectus. Fusce lectus ligula, elementum ut lorem nec, lacinia imperdiet enim. Quisque rutrum luctus leo, id sagittis mi. Nullam bibendum libero in turpis condimentum volutpat. Praesent euismod dapibus nisl, et imperdiet nulla accumsan in. Suspendisse consequat tempus euismod. Etiam vitae nisl lobortis, aliquet augue nec, luctus nunc. Morbi quis rutrum justo. Fusce velit sem, tristique vitae quam et, facilisis consectetur orci. Nam convallis leo at justo egestas, eget laoreet mi cursus.",
+      "AUCS group uses GitHub aurelia-community organization (https://github.com/aurelia-community) as the 'container' for all group activities, where each of the contained repositories acts as the home for a specific project, and the repository Aurelia Community-wide Collaboration (https://github.com/aurelia-community/community-wide-collaboration) serves the role of an global synchronization object coordinating actions in other projects. Work in each repository (documentation project), is coordinated by using GitHub project management services.",
     "class": "context3"
   }
 }
