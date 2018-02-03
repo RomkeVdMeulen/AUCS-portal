@@ -1,9 +1,9 @@
-# aurelia-community website
+# AUCS Portal
 
 This is an Aurelia CLI application, run it by
 
 ```
-npm install
+yarn install
 au run
 ```
 

@@ -2,11 +2,11 @@
   "contexts": ["content1", "content2", "content3"],
 
   "content1": {
-    "text": "Aurelia Users Community Space is an organized group of Aurelia users, focusing on a single task:creation of as many well written guides, blogs, tutorials, code snippets, etc. all of which are written by Aurelia developers for Aurelia developers. Note the term 'written by Aurelia developers', indicating that type of technical documents that will be written. Instead of documenting the Aurelia API, use of event listeners, logging, PAL, Router and Templating, AUCS team will start at the level where official Aurelia documents end.",
+    "text": "Aurelia Users Community Space is an organized group of Aurelia users, focusing on a single task :creation of as many well written guides, blogs, tutorials, code snippets, etc. all of which are written by Aurelia developers for Aurelia developers. Note the term 'written by Aurelia developers', indicating that type of technical documents that will be written. Instead of documenting the Aurelia API, use of event listeners, logging, PAL, Router and Templating, AUCS team will start at the level where official Aurelia documents end.",
     "class": "context1"
   },
   "content2": {
-    "text": "This application - AUCS website, should be considered as the 'aggregator and a transient station' between the Aurelia Community and Aurelia core team, acting as a markdown data buffer, content of which could be asynchronously moved to Aurelia proper website. All of AUCS deliverables are formatted as markdown files - AUCS website just provides structured interface to this data. In addition AUCS website hosts our own (Ghost) blog and Survey services, instrument that is critical to ensure that everyones voice is taken in the account.",
+    "text": "This application - AUCS portal, should be considered as the 'aggregator and a transient station' between the Aurelia Community and Aurelia core team, acting as a markdown data buffer, content of which could be asynchronously moved to Aurelia proper website. All of AUCS deliverables are formatted as markdown files - AUCS website just provides structured interface to this data. In addition AUCS website hosts our own (Ghost) blog and Survey services, instrument that is critical to ensure that everyones voice is taken in the account.",
     "class": "context2"
   },
   "content3": {
