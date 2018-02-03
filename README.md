@@ -7,3 +7,4 @@ yarn install
 au run
 ```
 
+The Github-pages hosted instance runs at **https://aurelia-community.github.io**
