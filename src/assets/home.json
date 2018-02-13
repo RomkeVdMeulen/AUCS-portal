@@ -2,7 +2,7 @@
   "contexts": ["content1", "content2", "content3"],
 
   "content1": {
-    "text": "Aurelia Users Community Space is an organized group of Aurelia users, focusing on a single task :creation of as many well written guides, blogs, tutorials, code snippets, etc. all of which are written by Aurelia developers for Aurelia developers. Note the term 'written by Aurelia developers', indicating that type of technical documents that will be written. Instead of documenting the Aurelia API, use of event listeners, logging, PAL, Router and Templating, AUCS team will start at the level where official Aurelia documents end.",
+    "text": "Aurelia Users Community Space is an organized group of Aurelia users, focusing on a single task: creation of as many well written guides, blogs, tutorials, code snippets, etc. all of which are written by Aurelia developers for Aurelia developers. Note the term 'written by Aurelia developers', indicating that type of technical documents that will be written. Instead of documenting the Aurelia API, use of event listeners, logging, PAL, Router and Templating, AUCS team will start at the level where official Aurelia documents end.",
     "class": "context1"
   },
   "content2": {
