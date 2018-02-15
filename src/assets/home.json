@@ -2,16 +2,16 @@
   "contexts": ["content1", "content2", "content3"],
 
   "content1": {
-    "text": "Aurelia Users Community Space is an organized group of Aurelia users, focusing on a single task: creation of as many well written guides, blogs, tutorials, code snippets, etc. all of which are written by Aurelia developers for Aurelia developers. Note the term 'written by Aurelia developers', indicating that type of technical documents that will be written. Instead of documenting the Aurelia API, use of event listeners, logging, PAL, Router and Templating, AUCS team will start at the level where official Aurelia documents end.",
+    "text": "Welcome to the Aurelia Users Community Space. We are a group of developers who use and love the Aurelia framework. Our mission is to create well written guides, blogs, tutorials, code snippets, and other technical resources, written by Aurelia developers for Aurelia developers. AUCS content starts where the official Aurelia documentation ends: we don't cover every part of the Aurelia API but rather show you how to put it all together to create excellent webapps.",
     "class": "context1"
   },
   "content2": {
-    "text": "This application - AUCS portal, should be considered as the 'aggregator and a transient station' between the Aurelia Community and Aurelia core team, acting as a markdown data buffer, content of which could be asynchronously moved to Aurelia proper website. All of AUCS deliverables are formatted as markdown files - AUCS website just provides structured interface to this data. In addition AUCS website hosts our own (Ghost) blog and Survey services, instrument that is critical to ensure that everyones voice is taken in the account.",
+    "text": "You can access all of the AUCS guides and resources through this portal, and help us develop it further on GitHub. All our content is written in markdown files. Our hope is that over time, each of these documents will find its way onto the official Aurelia HUB. You can also find our blog here, and access surveys that are used to determine where we concentrate our efforts. AUCS guides are written for you, the developer. It is important to us that your voice is taken into account.",
     "class": "context2"
   },
   "content3": {
     "text":
-      "AUCS group uses GitHub aurelia-community organization (https://github.com/aurelia-community) as the 'container' for all group activities, where each of the contained repositories acts as the home for a specific project, and the repository Aurelia Community-wide Collaboration (https://github.com/aurelia-community/community-wide-collaboration) serves the role of an global synchronization object coordinating actions in other projects. Work in each repository (documentation project), is coordinated by using GitHub project management services.",
+      "If you'd like to get involved in the Aurelia Users Community Space, we'd welcome your help! You can find us on GitHub at the [aurelia-community organization](https://github.com/aurelia-community). You'll find our various running projects there, which are coordinated through [community-wide-collaboration](https://github.com/aurelia-community/community-wide-collaboration).",
     "class": "context3"
   }
 }
