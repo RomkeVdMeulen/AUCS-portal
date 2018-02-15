@@ -2,48 +2,61 @@
   "version": 1.0,
   "title": "Guides",
   "overview":
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "AUCS team has chosen the following four guides to demonstrate the power of community contributors.",
   "groups": [
     {
-      "title": "How to create aucs guide with gitbook",
+      "title": "Aurelia CLI guide",
       "overview":
-        "This file file serves as your book's preface, a great place to describe your book's content and ideas.",
-      "author": "aurelia-community",
-      "book": "how-to-create-aucs-guide-with-gitbook"
+        "Aurelia CLI is a desktop tool using the command line interface to generate an Aurelia skeleton application.",
+      "book": "aurelia-cli-guide",
+      "author": "aucs-publishers"
     },
     {
-      "title": "Aurelia CLI guides",
+      "title": "Aurelia Full-Stack guide",
       "overview":
-        "Aurelia CLI is a desktop tool using the command line interface (yes, that thing from the anciant past that recently became omnipresent) to build a setup that Aurelia supports out-of-the-box.",
-      "book": "aurelia-cli",
-      "author": "adriatic"
+        "This guide is covering many different scenarios where Aurelia application acts as a front end of a full stack application.",
+      "book": "",
+      "author": "aucs-publishers"
+    },    
+    {
+      "title": "Identity Management Guide",
+      "overview":
+        "Identity management (IdM) is the task of controlling information about users on computers: information that authenticates the identity of a user, and information that describes information and actions they are authorized to access and/or perform.",
+      "book": "",
+      "author": "aucs-publishers"
     },
     {
-      "title": "Aurelia Typescript Adventures",
+      "title": "Tips and Tricks",
       "overview":
-        "This book is my attempt to collect all relevant information needed to establish the current state of the art of development of Aurelia applications using Typescript and Visual studio code.",
-      "book": "aurelia-typescript-adventures",
-      "author": "aurelia-tools"
-    }
+        "Tips and Tricks is a collection of advices written to help you be more  productive with Aurelia framework.",
+      "book": "tips-and-tricks",
+      "author": "aucs-publishers"
+    }    
   ],
   "guides": [
     {
       "index": 0,
-      "title": "How to create aucs guide with gitbook",
-      "author": "aurelia-community",
-      "book": "how-to-create-aucs-guide-with-gitbook"
-    },
+      "title": "Aurelia CLI guide",
+      "book": "aurelia-cli",
+      "author": "aucs-publishers"
+    },     
     {
       "index": 1,
-      "title": "Aurelia CLI guides",
-      "book": "aurelia-cli",
-      "author": "adriatic"
-    },
+      "title": "Full-Stack app development guide",
+      "author": "aucs-publishers",
+      "book": "full-stack-app-development-guide"
+    },  
     {
       "index": 2,
-      "title": "Aurelia Typescript Adventures",
-      "book": "aurelia-typescript-adventures",
-      "author": "aurelia-tools"
-    }
+      "title": "Identity Management Guide",
+      "book": "identity-management-guide",
+      "author": "aucs-publishers"
+    },
+    {
+      "index": 3,
+      "title": "Tips and Tricks ",
+      "book": "tips-and-tricks",
+      "author": "aucs-publishers"
+    }    
   ]
 }

@@ -18,12 +18,6 @@ export class App {
     config.addPipelineStep("postcomplete", PostCompleteStep);
     config.map(routes);
     this.router = router;
-    /*
-    const theScript = document.createElement('script');
-    theScript.src = "https://embed-cdn.surveyhero.com/popup/user/main.a8027c1f.js"
-    const head = document.getElementsByTagName('head')[0];
-    head.appendChild(theScript);
-    */
   }
 }
 

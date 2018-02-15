@@ -27,14 +27,6 @@ const routes = [
     settings: { icon: blogIcon }
   },
   {
-    route: "survey",
-    name: "survey",
-    moduleId: "survey/survey",
-    nav: true,
-    title: "Survey",
-    settings: { icon: surveyIcon }
-  },
-  {
     route: "help",
     name: "help",
     moduleId: "help/help",
